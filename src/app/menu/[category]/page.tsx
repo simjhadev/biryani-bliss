@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ProductType } from "@/app/types/types";
 import AddToCart from "@/components/AddToCart";
+export const dynamic = "force-dynamic";
 
 type Props = {
     params: {
