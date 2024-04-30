@@ -1,8 +1,9 @@
+
 import { ProductType } from "@/app/types/types";
 import DeleteButton from "@/components/DeleteButton";
 import Price from "@/components/Price";
 import Image from "next/image";
-
+export const dynamic = "force-dynamic";
 const getData = async (id: string) => {
     const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products/${id}`, {
         cache: "no-store"
