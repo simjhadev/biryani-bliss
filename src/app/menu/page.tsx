@@ -10,7 +10,7 @@ const getData = async () => {
 
     
     if(!res.ok){
-        throw new Error("Unable to fetch Menu Category data.");
+        throw new Error("Unable to fetch Menu Category data."+res.statusText);
     }
 
     return res.json();

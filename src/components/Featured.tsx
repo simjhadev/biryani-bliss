@@ -10,9 +10,10 @@ const getData = async () => {
         cache: "no-store"
     })
 
-
+    //console.log(res.statusText);
     if (!res.ok) {
-        throw new Error("Unable to fetch Featured Product data.");
+
+        throw new Error("Unable to fetch Featured Product data."+ res.statusText);
     }
 
     return res.json();
