@@ -16,7 +16,7 @@ export default function PageError({
   return (
     <div className="flex h-[80vh] flex-col items-center justify-center">
       <h2 className="text-center">Something went wrong!</h2>
-      <h2 className="text-center">{error.message}</h2>
+      <h2 className="text-center">{error.message + error.digest}</h2>
       <button
         className="mt-4 rounded-md bg-buttonBg px-4 py-2 text-sm text-white"
         onClick={

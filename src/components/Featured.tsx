@@ -13,7 +13,7 @@ const getData = async () => {
     //console.log(res.statusText);
     if (!res.ok) {
 
-        throw new Error(`Unable to fetch Featured Product data on ${process.env.NEXT_PUBLIC_API_URL}/api/products`+ res.statusText);
+        throw new Error(`Unable to fetch Featured Product data`);
     }
 
     return res.json();
@@ -56,7 +56,8 @@ const Featured = async () => {
             </div>
         );
     }catch(error){
-       return(<CustomError errorMsg="Unable to fetch Featured Product data." />)
+        
+       return(<CustomError errorMsg={`Unable to fetch Featured Product data on ${process.env.NEXT_PUBLIC_API_URL}/api/products`} />)
     }
 
     

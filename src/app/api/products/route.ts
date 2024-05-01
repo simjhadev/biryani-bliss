@@ -12,7 +12,7 @@ export const GET = async (req : NextRequest) => {
             ...(cat ? { catSlug: cat } : { isFeatured: true }),
         }
     });
-    throw new Error("Unable to fetch Featured product details.");
+    //throw new Error("Unable to fetch Featured product details.");
 
     return new NextResponse(JSON.stringify(products), { status: 200 });
   } catch (err) {
