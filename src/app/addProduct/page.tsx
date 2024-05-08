@@ -54,7 +54,7 @@ const AddProductPage = () => {
         const data = new FormData();
         data.append("file", file!);
 
-        const res = await fetch("/api/uploadImg", {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/uploadImg`, {
             method: "POST",
             body: data,
         });
